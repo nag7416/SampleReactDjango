@@ -1,0 +1,709 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+    overflow-x: hidden;
+}
+
+.navbar 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+
+    z-index: 1000;
+}
+.navbar .inner 
+{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    position: relative;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    /* padding: 12px 24px 12px 16px; */
+    color: #fff;
+
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .inner .left 
+{
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+}
+.navbar .inner .left .menu 
+{
+    margin: 8px;
+}
+.navbar .inner .left .menu button
+{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.navbar .inner .left .menu button svg 
+{
+    width: 24px;
+    height: 24px;
+    fill: #5e5e5e;
+}
+
+.navbar .inner .left .logo
+{
+    margin-left: 16px;
+    margin-right: 20px;
+}
+.navbar .inner .left .logo img 
+{
+    padding-top: 4px;
+    height: 24px;
+}
+
+
+
+
+
+
+
+.navbar .center
+{
+    display: flex;
+    align-items: center;
+}
+.navbar .center .searchlayer 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar .center .searchlayer form input 
+{
+    width: 330px;
+    height: 36px;
+    padding-left: 56px;
+    padding-right: 56px;
+    line-height: 18px;
+    color: black;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    font-size: 15px;
+    white-space: initial;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+
+
+.navbar .right 
+{
+    padding-right: 24px;
+}
+
+.navbar .right .links
+{
+    display: flex;
+    align-items: center;
+}
+.navbar .right .links .help 
+{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar .right .links .help button
+{
+    /* padding: 8px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.navbar .right .links .help button svg
+{
+    width: 24px;
+    height: 24px;
+}
+
+
+.navbar .right .links .create 
+{
+    display: flex;
+    align-items: center;
+}
+.navbar .right .links .create button
+{
+    display: flex;
+    align-items: center;
+
+    margin: 0 8px;
+    padding: 0 8px;
+    border: .5px solid lightgray;
+    background: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.navbar .right .links .create button svg 
+{
+    width: 24px;
+    height: 24px;
+    padding: 6px 0;
+    fill: #f00;
+
+    height: 100%;
+}
+.navbar .right .links .create button .createlabel 
+{
+    padding-left: 6px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 6px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.navbar .right .links .img 
+{
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+}
+.navbar .right .links .img button
+{
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.navbar .right .links .img button img 
+{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+.main 
+{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: flex-start;
+    padding-top: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.main .studioside
+{
+    /* width: 71px; */
+    width: 250px;
+    height: calc(100vh - 64px);
+    background: white;
+    transition: .4s;
+}
+.main .studioside.active 
+{
+    width: 71px;
+    transition: .4s;
+}
+.main .studioside .studioinner 
+{
+    height: calc(100vh - 64px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main .studioside .channelimage 
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 18px 0;
+
+}
+.main .studioside .channelimage .img 
+{
+    width: 112px;
+    height: 112px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.main .studioside .channelimage .img img 
+{
+    width: 100%;
+}
+.main .studioside .channelimage label 
+{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #0d0d0d;
+    padding-top: 14px;
+}
+.main .studioside .channelimage span 
+{
+    font-weight: 400;
+    letter-spacing: 0.011em;
+    font-size: 12px;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #606060;
+    padding-top: calc(21px - 12px - 7px);
+}
+
+
+
+.main .studioside.active .channelimage
+{
+    height: 60px;
+    margin: 0;
+}
+.main .studioside.active .channelimage .img
+{
+    width: 32px;
+    height: 32px;
+    min-height: 32px;
+}
+.main .studioside.active .channelimage label
+{
+    display: none;
+}
+.main .studioside.active .channelimage span 
+{
+    display: none;
+}
+
+
+
+.main .studioside .studiolinks
+{
+    width: 100%;
+    height: calc(100vh - 270px);
+    background: transparent;
+    overflow-y: scroll;
+    margin-bottom: 50px;
+}
+.main .studioside.active .studiolinks
+{
+    height: calc(100vh - 126px);
+}
+.main .studioside .studiolinks::-webkit-scrollbar
+{
+    width: 0;
+}
+.main .studioside .studiolinks ul 
+{
+    width: 100%;
+}
+.main .studioside .studiolinks ul li
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.main .studioside .studiolinks ul li a 
+{
+    width: 100%;
+    text-decoration: none;
+}
+.main .studioside .studiolinks ul li a button
+{
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+}
+.main .studioside .studiolinks ul li.active a button::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: #cc0000;
+}
+.main .studioside .studiolinks ul li a button svg 
+{
+    width: 24px;
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+.main .studioside .studiolinks ul li a button label 
+{
+    font-size: 13px;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.main .studioside .studiolinks ul li.active button
+{
+    background: whitesmoke;
+}
+.main .studioside .studiolinks ul li.active a button svg
+{
+    fill: #cc0000;
+}
+.main .studioside .studiolinks ul li.active a button label
+{
+    color: #cc0000;
+}
+
+
+.main .studioside.active .studiolinks ul li button svg 
+{
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+}
+.main .studioside.active .studiolinks ul li button label 
+{
+    width: 0;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+.main .studioscroll 
+{
+    width: calc(100vw - 250px);
+    height: calc(100vh - 64px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: .4s;
+}
+.main .studioscroll.active 
+{
+    width: calc(100vw - 71px);
+    transition: .4s;
+}
+.main .studioscroll .inner 
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+}
+.main .studioscroll .inner h5 
+{
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 32px;
+    left: 0;
+    padding-left: 32px;
+    padding-top: 23px;
+    position: sticky;
+    white-space: nowrap;
+}
+.main .studioscroll .inner .head 
+{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    border-bottom: .5px solid lightgray;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 17px;
+}
+.main .studioscroll .inner .head
+{
+    font-size: 13px;
+}
+.main .studioscroll .inner .head .video 
+{
+    width: 40%;
+    min-width: 300px;
+    padding-left: 15px;
+}
+.main .studioscroll .inner .head .visibility 
+{
+    width: 10%;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .studioscroll .inner .head .restrictions 
+{
+    width: 10%;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .studioscroll .inner .head .date 
+{
+    width: 10%;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .studioscroll .inner .head .views 
+{
+    width: 10%;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .studioscroll .inner .head .comments
+{
+    width: 10%;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .studioscroll .inner .head .likes
+{
+    width: 10%;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.main .studioscroll .inner .heads 
+{
+    height: calc(100vh - 160px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding-bottom: 10px;
+    padding-left: 22px;
+}
+.main .studioscroll .inner .heads::-webkit-scrollbar
+{
+    width: 0;
+}
+.main .studioscroll .inner .heads .inners 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.main .studioscroll .inner .heads .inners div 
+{
+    font-size: 13px;
+}
+.main .studioscroll .inner .heads .inners .video 
+{
+    width: 40%;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.main .studioscroll .inner .heads .inners .video a button
+{
+    display: flex;
+    align-items: flex-start;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.main .studioscroll .inner .heads .inners .video a button .video-img 
+{
+    width: 120px;
+    min-width: 120px;
+    height: 68px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.main .studioscroll .inner .heads .inners .video a button .video-img img 
+{
+    width: 100%;
+}
+.main .studioscroll .inner .heads .inners .video a button .video-detail 
+{
+    text-align: left;
+    height: 100%;
+    margin-left: 6px;
+}
+.main .studioscroll .inner .heads .inners .video a button .video-detail h3 
+{
+    max-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 15px;
+}
+.main .studioscroll .inner .heads .inners .video a button .video-detail p 
+{
+    font-size: 12px;
+    color: gray;
+    max-height: 30px;
+    overflow: hidden;
+}
+.main .studioscroll .inner .heads .inners .visibility
+{
+    width: 10%;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .studioscroll .inner .heads .inners .restrictions
+{
+    width: 10%;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .studioscroll .inner .heads .inners .date 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    min-width: 100px;
+}
+.main .studioscroll .inner .heads .inners .date span 
+{
+    margin-top: 4px;
+}
+.main .studioscroll .inner .heads .inners .views 
+{
+    width: 10%;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .studioscroll .inner .heads .inners .comments
+{
+    width: 10%;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .studioscroll .inner .heads .inners .likes 
+{
+    width: 10%;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main .studioscroll .inner .line 
+{
+    width: 100%;
+    height: 20px;
+    /* background: red; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 758px){
+    .navbar .center 
+    {
+        display: none;
+    }
+}
